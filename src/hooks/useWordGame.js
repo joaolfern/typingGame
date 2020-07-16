@@ -44,6 +44,7 @@ function useWordGame(startingTime) {
             else {
                 endGame()
             }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [timeRemaining, running])
 
     async function startGame() {
