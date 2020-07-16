@@ -2,17 +2,25 @@ html, body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: black;
-    color: #00b800;
-    font-family: 'Press Start 2P', cursive;
     text-align: center;
 }
 
 .app {
     display: flex;
-    font-family: 'Press Start 2P', cursive;
     flex-direction: column;
     align-items: center;
+}
+
+.fillPage {
+    height: 100%;
+}
+
+/*------------------------
+         typography
+--------------------------*/
+
+.app {
+    font-family: 'Press Start 2P', cursive;
 }
 
 .title-label, .wordCount-label {
@@ -20,13 +28,28 @@ html, body {
     margin: 1rem auto;
 }
 
+textarea {
+    font-family: 'Press Start 2P', cursive;
+}
+
+.highscore-label {
+    font-size: .8em;
+    color: rgb(29, 26, 26);
+}
+
+/*------------------------
+          layout
+--------------------------*/
+
 button {
     display: block;
     border: none;
-    background: #a80020;
-    background: #00b800;
     padding: 10px 20px;
-    text-transform: uppercase;
+}
+
+.themeButton {
+    align-self: flex-end;
+    margin: .5em;
 }
 
 .wrapper {
@@ -34,7 +57,6 @@ button {
 }
 
 textarea {
-    font-family: 'Press Start 2P', cursive;
     width: 90vw;
     max-width: 600px;
     height: 150px;
@@ -45,11 +67,37 @@ textarea {
 
 .highscore-label {
     display: flex;
-    font-size: .8em;
-    color: rgb(29, 26, 26);
     row-gap: 1em;
     position: absolute;
     margin: 0;
     bottom: .5em;
     right: .5em;
+}
+
+/*------------------------
+          themes
+--------------------------*/
+
+.dark-theme {
+    background: black;
+    color: #00b800;
+}
+
+.dark-component {
+    background: #00b800;
+    color: black;
+}
+
+.light-theme {
+    background: #F5EFFF;
+    color: #7371FC;
+}
+
+.light-component {
+    color: #F5EFFF;
+    background: #7371FC;
+}
+
+.disabled-component {
+    background: #969696;
 }
