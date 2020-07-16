@@ -15,7 +15,7 @@ function App() {
         startGame,
         wordCount,
         highscore
-    } = useWordGame(2)
+    } = useWordGame(15)
     console.log('render')
 
     return (
@@ -33,7 +33,6 @@ function App() {
                     <FontAwesomeIcon icon={faTrophy} />-{highscore}
                 </p>
             </div>
-
 
             <p className='timeRemaining-label'>Time remaining: {timeRemaining}</p>
 
