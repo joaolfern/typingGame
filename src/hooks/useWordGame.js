@@ -1,4 +1,6 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useContext } from 'react'
+
+import { ThemeContext } from '../context/themeContext'
 
 import useHighscore from './useHighscore'
 
@@ -6,6 +8,7 @@ function useWordGame(startingTime) {
 
     const textareaRef = useRef(null)
 
+    const { theme, toggleTheme } = useContext(ThemeContext)
     const [text, setText] = useState('')
     const [timeRemaining, setTimeRemaining] = useState(startingTime)
     const [running, setRunning] = useState(false)
@@ -77,7 +80,9 @@ function useWordGame(startingTime) {
         timeRemaining,
         startGame,
         wordCount,
-        highscore
+        highscore,
+        theme,
+        toggleTheme
     }
 }
 
