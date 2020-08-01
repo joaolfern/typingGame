@@ -6,7 +6,6 @@ import { faRedo, faPlay, faStop, faTrophy, faFillDrip } from '@fortawesome/free-
 import useWordGame from './hooks/useWordGame'
 
 function App() {
-
     const {
         textareaRef,
         handleChange,
